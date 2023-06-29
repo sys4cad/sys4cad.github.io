@@ -84038,7 +84038,7 @@ A.hn.prototype={
 J(){return"GroupStatusEnum."+this.b}}
 A.a6g.prototype={}
 A.Mc.prototype={
-I(a){return new A.Ad(new A.nd(null),A.G(["/login",new A.a9H()],t.N,t.Ab),"SmartView version  for inhaTech",!1,null)}}
+I(a){return new A.Ad(new A.nd(null),A.G(["/login",new A.a9H()],t.N,t.Ab),"SmartView version  for KU",!1,null)}}
 A.a9H.prototype={
 $1(a){return new A.nd(null)},
 $S:492}
