@@ -82,7 +82,12 @@
 					<h1>면접관리 솔루션</h1>
 					<h2>개발이 아닌 설정만으로 면접을 진행</h2>
 					<h3>사용한 만큼 비용을 지불, 최적의 비용으로 <br/>면접업무를 신속,정확하게 진행하실 수 있습니다.</h3>
-					<a class="btn btn-lg btn-success actionBtn" href="https://smartview.metadesk.kr"  target="_blank"><i class="fa fa-globe fa-wifi fa-4x pull-left"></i><span class="line1">웹사이트 접속하기</span><br/><span class="line2">SmartView</span></a>
+					<!-- 버튼 -->
+<a class="btn btn-lg btn-success actionBtn" href="javascript:void(0);" data-toggle="modal" data-target="#serverModal">
+  <i class="fa fa-globe fa-wifi fa-4x pull-left"></i>
+  <span class="line1">웹사이트 접속하기</span><br/>
+  <span class="line2">SmartView</span>
+</a>
 				</div>
 				<div class="col-md-6 col-md-pull-6 hidden-xs">
 					<div class="mobile">   
@@ -433,5 +438,25 @@ $(document).ready(function() {
 		
 });
 </script>
+<!-- 서버 이관 안내 모달 -->
+<div class="modal fade" id="serverModal" tabindex="-1" role="dialog" aria-labelledby="serverModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="serverModalLabel">안내</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="닫기">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <strong>서버 이관 작업중입니다.</strong><br/>
+        잠시 후 다시 시도해주세요.
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
   </body>
 </html>
