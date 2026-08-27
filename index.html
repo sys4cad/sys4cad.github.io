@@ -1,462 +1,405 @@
 <!DOCTYPE html>
-	<html lang="en"> 
-		<head>
-			<meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-			<meta name="description" content="smartView 면접관리 시스템 소개 by 메타데스크">
-			<meta name="author" content="metaDesk">
-			<meta name="facebook-domain-verification" content="o2ypz6l8kmajoyknd4sz38y53v3khn" />
-			<link rel="shortcut icon" href="assets/ico/favicon.ico">
-
-			<title>메타데스크</title>
-
-			<!-- Bootstrap core CSS -->
-			<link href="css/bootstrap.min.css" rel="stylesheet">
-
-			<!-- Custom styles for this template -->
-			<link href="css/custom.css" rel="stylesheet">
-			<link href="css/flexslider.css" rel="stylesheet">
-			
-			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-			<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
-			<link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-
-			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-			<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-			<![endif]-->
-			<!-- Meta Pixel Code -->
-			<script>
-			!function(f,b,e,v,n,t,s)
-			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-			n.queue=[];t=b.createElement(e);t.async=!0;
-			t.src=v;s=b.getElementsByTagName(e)[0];
-			s.parentNode.insertBefore(t,s)}(window, document,'script',
-			'https://connect.facebook.net/en_US/fbevents.js');
-			fbq('init', '824984429089230');
-			fbq('track', 'PageView');
-			fbq('track', 'Lead');
-			</script>
-			<noscript><img height="1" width="1" style="display:none"
-			src="https://www.facebook.com/tr?id=824984429089230&ev=PageView&noscript=1"
-			/></noscript>
-			<!-- End Meta Pixel Code --> 
-		</head>
-
-		<body>
-			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#topWrap">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-							</span>
-							Smart<span class="title">View</span>
-						</a>
-					</div>
-					<div class="collapse navbar-collapse appiNav">
-						<ul class="nav navbar-nav">
-							<li><a href="#featureWrap">솔루션개요</a></li>
-							<li><a href="#productWrap">솔루션강점</a></li>
-							<li><a href="#pricingWrap">가격정보</a></li>
-							<li><a href="#testimonialsWrap">고객평가</a></li> 
-						</ul>
-					</div><!--/.nav-collapse -->
-				</div>
-			</div>
-	
-			<div id="topWrap" class="jumbotron">
-			<div class="container">
-				<div class="col-md-6 col-md-push-6 jumboText">
-					<h1>면접관리 솔루션</h1>
-					<h2>개발이 아닌 설정만으로 면접을 진행</h2>
-					<h3>사용한 만큼 비용을 지불, 최적의 비용으로 <br/>면접업무를 신속,정확하게 진행하실 수 있습니다.</h3>
-					<!-- 버튼 -->
-<a class="btn btn-lg btn-success actionBtn" href="javascript:void(0);" data-toggle="modal" data-target="#serverModal">
-  <i class="fa fa-globe fa-wifi fa-4x pull-left"></i>
-  <span class="line1">웹사이트 접속하기</span><br/>
-  <span class="line2">SmartView</span>
-</a>
-				</div>
-				<div class="col-md-6 col-md-pull-6 hidden-xs">
-					<div class="mobile">   
-						<div class="mobileSlider">
-							<ul class="slides">
-								<li>
-									<img src="assets/img/screen1.jpg"/>
-								</li>
-								<li>
-									<img src="assets/img/screen2.jpg"/>
-								</li>
-								<li>
-									<img src="assets/img/screen4.jpg"/>
-								</li>
-								<li>
-									<img src="assets/img/screen3.jpg"/>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			</div>
-
-	<div id="featureWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 text-center feature">
-					<i class="fa fa-tablet icon"></i>
-					<h3>면접 구성 관리</h3>
-					<p>
-					대학 면접 전형 별 면접학과, 평가항목과 평가방식, 면접장소당 복수평가위원 구성
-					</p>
-				</div>
-				<div class="col-sm-4 text-center feature">
-					<i class="fa fa-pencil icon"></i>
-					<h3>손 쉬운 설정의 변경</h3>
-					<p>
-					드래그 앤 드롭에 의해 면접장, 등록장, 평가위원, 운영요원 등 자원간의 관계를 정의
-					</p>
-				</div>
-				<div class="col-sm-4 text-center feature">
-					<i class="fa fa-star icon"></i>
-					<h3>검증된 성능, 고객 만족</h3>
-					<p>
-					인하공전 2023년도 1,2차 수시 및 정시에 활용하여 면접인원 6500명의 진행에 무결점 진행. 광클릭 면접예약 부하에도 안정된 응답성 제공
-					</p>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /featureWrap -->
-	
-	<div id="productWrap" class="altWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">최신의 웹기술을 적용한 직관적인 사용자 화면</h2>
-					<h3 class="sectionTitle">Master Data Management,GraphQL과 Cache를 활용한 고성능... 설치가 필요없는 웹시스템</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5 col-md-offset-1">
-					<div class="imgWrap">
-						<img class="img-responsive" src="assets/img/admin.png"/><br/>
-						<img class="img-responsive" src="assets/img/register.png"/>
-						<img class="img-responsive" src="assets/img/tablet.jpg"/>
-						<img class="img-responsive" src="assets/img/interviewFlow.jpg"/>
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="productFeatures clearfix">
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-user fa-stack-1x fa-inverse"></i>      
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>관리자기능</h3>
-							<p>입시전형 별 면접자원(대기장,접수처,면접장,평가위원)의 배정 및 응시자 정보 연계(유웨이,진학사), 사용자별 항목별 접근권의 제한, 변경된 정보의 버전 관리, 버전간 비교를 지원합니다.
-							특히, 접수시 촬영한 사진의 보관을 통해 신분증 변조에 의한 부정행위를 검증 가능합니다.</p>
-						</div>
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>다양한 설정기능</h3>
-							<p>면접예약 시간 통제 및 학과 별 평가항목 개별 정의, 면접시간 조정, 테스트모드 지원, 면접조별 인원설정(1~7인), 전형유형 표시여부, 통계화면 등을 관리자 화면에서 설정합니다.</p>
-						</div>
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>간결하고 직관적인 화면디자인</h3>
-							<p>최신 웹화면 개발기술인 Flutter를 사용하여, 페이지 이동 없이 한 화면에서 모든 기능을 제공합니다.</p>
-						</div>
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>     
-							<i class="fa fa-certificate fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10">
-							<h3>면접 설정정보 인증서비스</h3>
-							<p>면접은 대기장,접수처,면접장과 이의 운영자,평가위원 등 다수의 구성정보를 필요로 하며, 이러한 구성에 오류가 없어야 합니다.
-							메타데스크는 고객이 구성한 정보의 검증과 테스트모드에 의한 재검증을 통해 오류없는 면접진행을 보장합니다.</p>
-						</div>
-						<div class="col-xs-2 icon">
-							<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>     
-							<i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-						<div class="col-xs-10" id="video-container">
-							<h3>SmartView 적용 사례</h3>
-							<p> 인하공업전문대학에서 2022,2023년도에 SmartView시스템을 활용한 실제 사례를 동영상을 통해 확인하세요.</p>
-   	   					  <!-- 비디오를 재생할 iframe을 추가합니다. -->
-					    	  <iframe id="youtube-player" width="250" height="140" src="https://www.youtube.com/embed/3uxK96qUrx0" title="인하공전 입시면접을 소개합니다❕｜인하공전 면접장 내부 살펴보기｜인하공전 면접｜인하공전 입시면접｜인하공전 면접 질문" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					  	</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /productWrap -->
-
-
-			
-	<div id="pricingWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">가격정보</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<ul class="priceTable">
-						<li class="title">기본가격</li>
-						<li class="description">면접서버 설정비용</li>
-						<li class="price">2,000,000원/서버  - VAT별도</li>
-						<ul class="features">
-							<li>면접구성 설정지원/검증</li>
-							<li>유웨이 및 진학사 응시생 정보연계</li>
-							<li>성적처리 연계</li>
-							<li>관리자계정 및 운영계정 제공</li>
-						</ul>
-						<!--
-						<li class="call">
-							<a class="btn btn-success btn-lg" href="#">Buy Now</a>
-						</li>
-						-->
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<ul class="priceTable">
-						<li class="title">면접관리 PLAN</li>
-						<li class="description">면접인원 1인당 비용</li>
-						<li class="price">2,500원/인  - VAT별도</li>
-						<ul class="features">
-							<li>*응시생 1인당 비용임</li>
-							<li>대기장 입실, 면접조 편성, 평가</li>
-							<li>당일계정 정보생성 배포</li>
-							<li>면접진행 현황정보 제공</li>
-						</ul>
-						<!--
-						<li class="call">
-							<a class="btn btn-success btn-lg" href="#">Buy Now</a>
-						</li>
-						-->
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<ul class="priceTable">
-						<li class="title">면접예약 PLAN</li>
-						<li class="description">면접예약 지원</li>
-						<li class="price">500원/인  - VAT별도</li>
-						<ul class="features">
-							<li>서버 구성 및 Gate통제</li>
-							<li>면접예약, 임의배정</li>
-							<li>모바일수험표 제공</li>
-							<li>응시확인서 제공</li>
-						</ul>
-						<!--
-						<li class="call">
-							<a class="btn btn-success btn-lg" href="#">Buy Now</a>
-						</li>
-						-->
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /pricingWrap -->
-	
-	<div id="testimonialsWrap" class="altWrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="sectionTitle">고객 후기</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="quote">"보안에 문제가 있던 기존의 면접관리시스템을 SmartView로 대체하여 인력과 비용을 전년대비 57%이상 
-								절감하였습니다."</div>
-								<div class="author">인하공업전문대학 입학처장</div>
-							</li>
-							<li>
-								<div class="quote">"면접고사 종료 후 PC & 모바일에서 응시 확인서 발급이 가능하여 업무 효율성 증대되었고 수험생 민원 발생건수가 `0` 였습니다"</div>
-								<div class="author">인하공업전문대학 입학처 담당자</div>
-							</li>
-							<li>
-								<div class="quote">"화면이 직관적이고 깔끔해서 사용이 매우 편했습니다."</div>
-								<div class="author">평가위원 교수 OOO님</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /testimonialsWrap -->
-	 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 text-center">
-					<p>Copyright &copy; 2023 smartView - All rights reserved by metaDesk </p>
-					<p><img style="max-width: 200px; height: auto;" src="assets/img/metadesk_logo_white.png"/></p>
-					<p><strong>상호명:</strong> 메타데스크 | <strong>대표자:</strong> 송영수 | <strong>사업자등록번호:</strong> 196-57-00552</p>
-  <p><strong>주소:</strong> 서울특별시 동작구 서달로90 흑석자이 313-1905 | <strong>이메일:</strong> metadesk.inc@gmail.com</p>
-  <p><strong>카카오톡 채널명:</strong> <a href="javascript:void(0);" onclick="window.open('http://pf.kakao.com/_vPQnC', '_blank');">컴시간플러스,온코트</a></p>
-  <p style="color: gray;">상기 카카오톡 채널(컴시간플러스,온코트)은 위 사업자인 메타데스크가 직접 운영합니다.</p>
-
-					<p class="social">
-						<a href="https://www.facebook.com/metadesk.kr">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-						<a href="https://twitter.com/metadeskInc">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-						<a href="https://www.youtube.com/channel/UCroXKZcd_xftVmQOYRTpKog">
-							<span class="fa-stack fa-lg">
-								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/flexslider.js"></script>
-	
-<script type="text/javascript">
-    // JavaScript를 이용하여 비디오 재생 기능을 추가합니다.
-    // iframe을 선택합니다.
-    const player = document.getElementById("youtube-player");
-
-    // 비디오를 재생하는 함수를 만듭니다.
-    function playVideo() {
-      // autoplay 파라미터를 1로 설정하여 재생합니다.
-      player.src = "https://www.youtube.com/embed/3uxK96qUrx0?autoplay=1";
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온코트 (OnCourt) - 스마트 라켓 스포츠 경기 대진 & 운영 플랫폼</title>
+  <style>
+    :root {
+      --primary: #10b981;
+      --primary-neon: #d4ff00;
+      --dark: #0f172a;
+      --card-bg: #1e293b;
+      --border-color: #334155;
+      --text-muted: #94a3b8;
     }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif;
+      background: var(--dark);
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid var(--border-color); }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 900; color: #fff; letter-spacing: -0.5px; }
+    .logo span { color: var(--primary-neon); }
 
-    // 마우스 클릭 이벤트를 감지하여 비디오를 재생합니다.
-    document.getElementById("video-container").addEventListener("click", playVideo);
-	
-$(document).ready(function() {
-	
-	$('.mobileSlider').flexslider({
-		animation: "slide",
-		slideshowSpeed: 3000,
-		controlNav: false,
-		directionNav: true,
-		prevText: "&#171;",
-		nextText: "&#187;"
-	});
-	$('.flexslider').flexslider({
-		animation: "slide",
-		directionNav: false
-	});
-		
-	$('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			if ($(window).width() < 768) {
-				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top - $('.navbar-header').outerHeight(true) + 1
-					}, 1000);
-					return false;
-				}
-			}
-			else {
-				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top - $('.navbar').outerHeight(true) + 1
-					}, 1000);
-					return false;
-				}
-			}
+    /* Hero Section with Visual */
+    .hero { padding: 70px 0 50px; text-align: center; }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(212, 255, 0, 0.15);
+      color: var(--primary-neon);
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero h1 { font-size: 42px; font-weight: 900; line-height: 1.3; margin-bottom: 18px; }
+    .hero h1 span { color: var(--primary-neon); }
+    .hero p { font-size: 17px; color: var(--text-muted); max-width: 680px; margin: 0 auto 36px; }
 
-		}
-	});
-	
-	$('#toTop').click(function() {
-		$('html,body').animate({
-			scrollTop: 0
-		}, 1000);
-	});
-	
-	var timer;
-    $(window).bind('scroll',function () {
-        clearTimeout(timer);
-        timer = setTimeout( refresh , 50 );
-    });
-    var refresh = function () {
-		if ($(window).scrollTop()>100) {
-			$(".tagline").fadeTo( "slow", 0 );
-		}
-		else {
-			$(".tagline").fadeTo( "slow", 1 );
-		}
-    };
-		
-});
-</script>
-<!-- 서버 이관 안내 모달 -->
-<div class="modal fade" id="serverModal" tabindex="-1" role="dialog" aria-labelledby="serverModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+    /* Visual Banner & Phone Mockup */
+    .visual-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      margin-bottom: 60px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .visual-wrap { grid-template-columns: 1fr; }
+    }
+    .hero-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .phone-mockup {
+      background: #020617;
+      border: 2px solid #475569;
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      text-align: left;
+    }
+    .phone-header { font-size: 13px; color: var(--primary-neon); font-weight: bold; margin-bottom: 12px; display: flex; justify-content: space-between; }
+    .match-item {
+      background: #1e293b;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      border-left: 3px solid var(--primary-neon);
+    }
+    .match-item .court { color: var(--text-muted); font-size: 11px; margin-bottom: 4px; }
+    .match-item .players { font-weight: 600; color: #fff; }
+
+    /* Features Grid */
+    .section-title { text-align: center; font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    .section-desc { text-align: center; color: var(--text-muted); font-size: 15px; margin-bottom: 40px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; padding-bottom: 70px; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-img { width: 100%; height: 160px; object-fit: cover; }
+    .card-body { padding: 24px; flex-grow: 1; }
+    .card h3 { font-size: 19px; margin-bottom: 10px; color: #fff; }
+    .card p { color: var(--text-muted); font-size: 14px; }
+
+    /* Pricing Section */
+    .pricing-section { padding: 60px 0 80px; border-top: 1px solid var(--border-color); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 30px; }
+    .price-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .price-card.featured {
+      border: 2px solid var(--primary-neon);
+      background: #192237;
+    }
+    .price-badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--primary-neon);
+      color: #000;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+    .plan-name { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .plan-price { font-size: 32px; font-weight: 900; color: #fff; margin-bottom: 16px; }
+    .plan-price span { font-size: 14px; font-weight: 400; color: var(--text-muted); }
+    .plan-features { list-style: none; margin-bottom: 24px; flex-grow: 1; }
+    .plan-features li { font-size: 14px; color: #cbd5e1; margin-bottom: 10px; }
+    .plan-features li::before { content: "✓ "; color: var(--primary-neon); font-weight: bold; }
+
+    .policy-box {
+      background: #111827;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .policy-box h4 { color: #cbd5e1; margin-bottom: 8px; font-size: 14px; }
+    .policy-box ul { padding-left: 18px; line-height: 1.7; }
+
+    /* Footer (카카오 심사 필수 항목) */
+    footer {
+      background: #020617;
+      border-top: 1px solid #1e293b;
+      padding: 48px 0;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .footer-content { display: flex; flex-direction: column; gap: 12px; }
+    .footer-brand { font-size: 16px; font-weight: 800; color: #cbd5e1; margin-bottom: 4px; }
+    .footer-info { display: flex; flex-wrap: wrap; gap: 16px; row-gap: 6px; }
+    .footer-links { margin-top: 8px; display: flex; gap: 16px; }
+    .footer-links a { color: #94a3b8; text-decoration: underline; cursor: pointer; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { margin-top: 16px; color: #475569; }
+
+    /* Modal for Privacy Policy */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #1e293b;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 30px;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 12px; }
+    .modal-header h3 { color: #fff; font-size: 18px; }
+    .close-btn { color: #94a3b8; font-size: 24px; cursor: pointer; border: none; background: none; }
+    .modal-body h5 { color: #fff; margin: 16px 0 6px; font-size: 15px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="logo">온코트 <span>OnCourt</span></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">스마트 클럽 대진 솔루션</div>
+      <h1>종이와 엑셀 없는<br>스마트 코트 파트너, <span>온코트</span></h1>
+      <p>카카오톡 챗봇과 연동하여 KDK 대진표 편성부터 코트 배정, 실시간 모바일 스코어보드까지 원스톱으로 관리하세요.</p>
+
+      <!-- Visual Showcase -->
+      <div class="visual-wrap">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1000&q=80" alt="테니스 코트 경기 모습">
+        <div class="phone-mockup">
+          <div class="phone-header">
+            <span>● 실시간 매치 현황</span>
+            <span>LIVE</span>
+          </div>
+          <div class="match-item">
+            <div class="court">1코트 (KDK 3라운드)</div>
+            <div class="players">김철수 / 박영희 VS 이민호 / 정수진</div>
+          </div>
+          <div class="match-item">
+            <div class="court">2코트 (KDK 3라운드)</div>
+            <div class="players">강동원 / 송지효 VS 최유리 / 한지민</div>
+          </div>
+          <div style="font-size:11px; color:#10b981; text-align:center; margin-top:8px;">✓ 카카오톡 챗봇으로 1초 만에 자동 생성</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features with Images -->
+  <section class="container">
+    <h2 class="section-title">스마트 코트 운영 핵심 기능</h2>
+    <p class="section-desc">클럽 운영진의 번거로운 작업은 줄이고 경기의 즐거움은 극대화합니다.</p>
+    
+    <div class="features">
+      <div class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80" alt="대진표 생성">
+        <div class="card-body">
+          <h3>⚡ 자동 KDK & 리그 대진</h3>
+          <p>인원수와 코트 수만 입력하면 파트너가 겹치지 않는 최적의 KDK 복식 대진과 풀리그 조편성을 즉시 완성합니다.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="코트 배정">
+        <div class="card-body">
+          <h3>📱 실시간 코트 배정 & 호출</h3>
+          <p>경기 순환 알고리즘으로 대기 시간을 최소화하고, 다음 경기 참가자에게 카카오톡 호출 알림을 발송합니다.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80" alt="모바일 점수판">
+        <div class="card-body">
+          <h3>📊 모바일 스코어 & 랭킹</h3>
+          <p>모바일에서 세트 스코어를 즉시 입력하며, 클럽 내 실시간 순위와 회원 누적 전적이 자동으로 데이터베이스에 기록됩니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Policy Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">서비스 요금 및 이용 정책</h2>
+      <p class="section-desc">클럽 규모에 맞춰 합리적인 플랜을 선택하세요. 베타 서비스 기간 동안 기본 기능은 전면 무료입니다.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="plan-name">베타 / 무료 체험</div>
+          <div class="plan-price">0원 <span>/ 월</span></div>
+          <ul class="plan-features">
+            <li>클럽 1개 생성 및 관리</li>
+            <li>KDK 자동 대진표 3회 생성</li>
+            <li>실시간 모바일 스코어보드</li>
+            <li>카카오톡 챗봇 기본 연동</li>
+			<li>경기진행 알림(미지원)</li>
+          </ul>
+        </div>
+
+        <div class="price-card featured">
+          <div class="price-badge">인기</div>
+          <div class="plan-name">클럽 프로 (정기모임)</div>
+          <div class="plan-price">9,900원 <span>/ 월 (VAT 포함)</span></div>
+          <ul class="plan-features">
+            <li>무료 플랜의 모든 기능 포함</li>
+            <li>다중 코트 동시 자동 순환 배정</li>
+            <li>클럽 회원별 누적 전적/랭킹 보드</li>
+            <li>대회 참가 접수 및 명단 자동 관리</li>
+            <li>경기 결과 엑셀/이미지 내보내기</li>
+			<li>경기진행 알림</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <div class="plan-name">토너먼트 (대회 전용)</div>
+          <div class="plan-price">별도 협의 <span>/ 회당</span></div>
+          <ul class="plan-features">
+            <li>대규모 오픈 대회/구 대회 운영</li>
+            <li>예선 조별리그 + 본선 토너먼트 연동</li>
+            <li>대회 전용 실시간 전광판 뷰 제공</li>
+            <li>전담 기술 지원 및 운영 커스텀</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="policy-box">
+        <h4>📌 결제 및 환불 안내</h4>
+        <ul>
+          <li><strong>결제 방식:</strong> 정기 결제 플랜은 매월 등록된 결제 수단을 통해 자동 결제됩니다.</li>
+          <li><strong>환불 정책:</strong> 결제 후 7일 이내에 서비스를 이용하지 않은 경우 전액 환불이 가능하며, 이용 기간 중 중도 해지 시 잔여 일수에 대해 일할 계산하여 환불 처리됩니다.</li>
+          <li><strong>서비스 문의 및 지원:</strong> 서비스 이용 중 발생한 문의 및 환불 요청은 고객센터 이메일(metadesk.inc@gmail.com) 또는 카카오톡 채널을 통해 신속하게 처리해 드립니다.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer : 카카오 심사 필수 영역 -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">온코트 (OnCourt) | 서비스 운영사 정보</div>
+      <div class="footer-info">
+        <span><strong>상호명:</strong> 메타데스</span>
+        <span><strong>대표자:</strong> 송영수</span>
+        <span><strong>사업자등록번호:</strong> 196-57-00552</span>
+        <span><strong>통신판매업신고:</strong> 2025-경기김포-3193</span>
+      </div>
+      <div class="footer-info">
+        <span><strong>사업장 소재지:</strong> 서울특별시 동작구 서달로90 흑석자이 313-1905 </span>
+        <span><strong>고객센터/문의:</strong> metadesk.inc@gmail.com</span>
+      </div>
+      <div class="footer-links">
+        <a onclick="openModal('privacyModal')"><strong>개인정보 처리방침</strong></a>
+        <a onclick="openModal('termsModal')">이용약관</a>
+      </div>
+      <div class="footer-copy">
+        Copyright © OnCourt. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
-        <h5 class="modal-title" id="serverModalLabel">안내</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="닫기">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="modal-header">
+        <h3>개인정보 처리방침</h3>
+        <button class="close-btn" onclick="closeModal('privacyModal')">&times;</button>
       </div>
-      <div class="modal-body text-center">
-        <strong>서버 이관 작업중입니다.</strong><br/>
-        고객과의 계약 후 클라우드에 배포가 됩니다. 테스트 서버는 2026년 현재 중지중입니다.
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+      <div class="modal-body">
+        <p>온코트(이하 '서비스')는 정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보 보호법에 따라 이용자의 개인정보를 보호하고 관련 고충을 신속하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+        
+        <h5>1. 개인정보 수집 항목 및 목적</h5>
+        <p>서비스는 카카오톡 챗봇 연동, 클럽 및 대진표 관리, 참가 신청 등의 서비스 제공을 위해 다음 항목을 수집합니다.<br>
+        - 필수항목: 카카오 계정 고유 식별자(User ID), 닉네임, 클럽 내 경기 전적 기록<br>
+        - 선택항목: 클럽 관리자 연락처, 프로필 사진</p>
+
+        <h5>2. 개인정보 보유 및 이용 기간</h5>
+        <p>이용자의 개인정보는 서비스 이용 기간 동안 보유하며, 회원 탈퇴 또는 서비스 이용 종료 요청 시 지체 없이 파기합니다. 단, 관계 법령에 의해 보존할 필요가 있는 경우 해당 법령에서 정한 기간 동안 보관합니다.</p>
+
+        <h5>3. 개인정보의 제3자 제공 및 위탁</h5>
+        <p>서비스는 원칙적으로 이용자의 개인정보를 외부에 제공하지 않으며, 서비스 운영에 필요한 시스템 호스팅 및 결제 처리를 위해 전문 업체에 위탁 관리할 수 있습니다.</p>
+
+        <h5>4. 이용자의 권리와 행사 방법</h5>
+        <p>이용자는 언제든지 자신의 개인정보에 대해 열람, 수정, 삭제를 요청할 수 있으며 고객센터 이메일을 통해 접수 가능합니다.</p>
+
+        <h5>5. 개인정보 보호책임자</h5>
+        <p>- 책임자: 송영수<br>
+        - 이메일: metadesk.inc@gmail.com</p>
       </div>
     </div>
   </div>
-</div>
-  </body>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>서비스 이용약관</h3>
+        <button class="close-btn" onclick="closeModal('termsModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h5>제1조 (목적)</h5>
+        <p>본 약관은 온코트가 제공하는 스마트 대진표 및 클럽 관리 플랫폼의 이용 조건 및 절차에 관한 제반 사항을 규정함을 목적으로 합니다.</p>
+        <h5>제2조 (서비스의 제공)</h5>
+        <p>온코트는 라켓 스포츠 동호회를 위한 자동 대진 생성, 실시간 코트 배정, 스코어보드 집계 및 참가 신청 관리 서비스를 제공합니다.</p>
+        <h5>제3조 (환불 및 취소)</h5>
+        <p>유료 플랜 결제 후 7일 이내 서비스 미이용 시 전액 환불되며, 기간제 이용권은 잔여 일수에 대해 일할 계산 환불을 원칙으로 합니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
 </html>
