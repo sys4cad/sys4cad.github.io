@@ -106,9 +106,54 @@
     .match-item .court { color: var(--text-muted); font-size: 11px; margin-bottom: 4px; }
     .match-item .players { font-weight: 600; color: #fff; }
 
-    /* Features Grid */
+    /* Section Common */
     .section-title { text-align: center; font-size: 28px; font-weight: 800; margin-bottom: 12px; }
     .section-desc { text-align: center; color: var(--text-muted); font-size: 15px; margin-bottom: 40px; }
+
+    /* Comparison / Why OnCourt Section */
+    .why-section { padding: 40px 0 70px; }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+    .comp-card {
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .comp-card.bad {
+      background: #1e1b24;
+      border: 1px solid #4a2d39;
+    }
+    .comp-card.good {
+      background: #0f2420;
+      border: 2px solid var(--primary-neon);
+      position: relative;
+    }
+    .comp-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .badge-bad { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+    .badge-good { background: var(--primary-neon); color: #000; }
+    .comp-title { font-size: 20px; font-weight: 800; margin-bottom: 16px; color: #fff; }
+    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .comp-list li { font-size: 14px; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; }
+    .comp-list.bad li span { color: #f87171; font-weight: bold; }
+    .comp-list.good li span { color: var(--primary-neon); font-weight: bold; }
+
+    /* Features Grid */
     .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; padding-bottom: 70px; }
     .card {
       background: var(--card-bg);
@@ -260,7 +305,7 @@
     <div class="container">
       <div class="badge">스마트 클럽 대진 솔루션</div>
       <h1>종이와 엑셀 없는<br>스마트 코트 파트너, <span>온코트</span></h1>
-      <p>카카오톡 챗봇과 연동하여 KDK 대진표 편성부터 코트 배정, 실시간 모바일 스코어보드까지 원스톱으로 관리하세요.</p>
+      <p>회원들에게 새 앱 설치를 부탁하지 마세요. 매일 쓰는 카카오톡 안에서 대진표 편성부터 코트 배정, 실시간 스코어보드까지 즉시 시작됩니다.</p>
 
       <!-- Visual Showcase -->
       <div class="visual-wrap">
@@ -280,6 +325,38 @@
           </div>
           <div style="font-size:11px; color:#10b981; text-align:center; margin-top:8px;">✓ 카카오톡 챗봇으로 1초 만에 자동 생성</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why OnCourt (앱 설치 번거로움 vs 카톡 기반 강점 비교) -->
+  <section class="container why-section">
+    <h2 class="section-title">왜 온코트(OnCourt)일까요?</h2>
+    <p class="section-desc">클럽 총무님과 회원의 경기 몰입을 방해하는 모든 번거로움을 걷어냈습니다.</p>
+
+    <div class="comparison-grid">
+      <!-- 기존 전용 앱의 한계 -->
+      <div class="comp-card bad">
+        <span class="comp-badge badge-bad">기존 전용 대진 앱</span>
+        <h3 class="comp-title">"앱 깔고 가입해 주세요..."</h3>
+        <ul class="comp-list bad">
+          <li><span>✕</span> <strong>새 앱 설치 강요:</strong> 코트 현장에서 앱스토어 검색 및 다운로드 대기 발생</li>
+          <li><span>✕</span> <strong>번거로운 회원가입:</strong> 본인인증, ID/PW 설정 과정에서 시니어 회원 이탈</li>
+          <li><span>✕</span> <strong>알림 누락:</strong> 푸시 알림 권한 거부나 백그라운드 제한으로 호출 놓침</li>
+          <li><span>✕</span> <strong>총무의 반복 설명:</strong> 모임 때마다 신규 회원에게 사용법을 일일이 교육</li>
+        </ul>
+      </div>
+
+      <!-- 온코트의 카카오톡 기반 혁신 -->
+      <div class="comp-card good">
+        <span class="comp-badge badge-good">온코트 (카카오톡 기반)</span>
+        <h3 class="comp-title">"카톡 채널만 추가하면 끝!"</h3>
+        <ul class="comp-list good">
+          <li><span>✓</span> <strong>앱 설치 ZERO:</strong> 전 국민이 매일 쓰는 카카오톡에서 1초 만에 바로 진입</li>
+          <li><span>✓</span> <strong>원터치 카카오 연동:</strong> 번거로운 회원가입 없이 카카오 계정으로 즉시 식별</li>
+          <li><span>✓</span> <strong>100% 도달 카톡 알림:</strong> 코트 입장 호출 및 대기 순번을 카톡 알림으로 즉시 수신</li>
+          <li><span>✓</span> <strong>직관적인 채팅방 메뉴:</strong> 대진표, 스코어, 랭킹 조회를 터치 한 번으로 해결</li>
+        </ul>
       </div>
     </div>
   </section>
