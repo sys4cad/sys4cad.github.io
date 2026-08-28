@@ -163,10 +163,127 @@
       display: flex;
       flex-direction: column;
     }
-    .card-img { width: 100%; height: 160px; object-fit: cover; }
+    .card-img { width: 100%; height: 180px; object-fit: cover; }
     .card-body { padding: 24px; flex-grow: 1; }
     .card h3 { font-size: 19px; margin-bottom: 10px; color: #fff; }
     .card p { color: var(--text-muted); font-size: 14px; }
+
+    /* Custom Visual Containers for Cards */
+    .visual-container {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background: #0b1329;
+    }
+    .visual-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+
+    /* Card 2: 실시간 코트 호출 카톡 오버레이 */
+    .kakao-push-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(254, 229, 0, 0.4);
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+    .kakao-push-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--kakao-yellow);
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+    .kakao-push-header .badge-kakao {
+      background: var(--kakao-yellow);
+      color: #000;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    .kakao-push-msg {
+      font-size: 12px;
+      color: #f8fafc;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    .kakao-push-msg strong {
+      color: var(--primary-neon);
+    }
+
+    /* Card 3: 대형 전광판 배경 + 비스듬한 스마트폰 뷰 */
+    .scoreboard-bg {
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #020617 0%, #1e1b4b 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .board-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary-neon);
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+    .board-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #cbd5e1;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .phone-tilt-overlay {
+      position: absolute;
+      right: -15px;
+      bottom: -20px;
+      width: 170px;
+      height: 190px;
+      background: #0f172a;
+      border: 3px solid #64748b;
+      border-radius: 18px 18px 0 0;
+      transform: rotate(-12deg);
+      box-shadow: -8px -8px 25px rgba(0,0,0,0.8);
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .phone-tilt-title {
+      font-size: 10px;
+      color: var(--primary-neon);
+      font-weight: bold;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 4px;
+    }
+    .phone-score-box {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 6px;
+      text-align: center;
+    }
+    .score-numbers {
+      font-size: 15px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 2px;
+    }
 
     /* Pricing Section */
     .pricing-section { padding: 60px 0 80px; border-top: 1px solid var(--border-color); }
@@ -283,7 +400,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand-group">
@@ -300,14 +416,12 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="badge">스마트 클럽 대진 솔루션</div>
       <h1>종이와 엑셀 없는<br>스마트 코트 파트너, <span>온코트</span></h1>
       <p>회원들에게 새 앱 설치를 부탁하지 마세요. 매일 쓰는 카카오톡 안에서 대진표 편성부터 코트 배정, 실시간 스코어보드까지 즉시 시작됩니다.</p>
 
-      <!-- Visual Showcase -->
       <div class="visual-wrap">
         <img class="hero-img" src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1000&q=80" alt="테니스 코트 경기 모습">
         <div class="phone-mockup">
@@ -329,13 +443,11 @@
     </div>
   </section>
 
-  <!-- Why OnCourt (앱 설치 번거로움 vs 카톡 기반 강점 비교) -->
   <section class="container why-section">
     <h2 class="section-title">왜 온코트(OnCourt)일까요?</h2>
     <p class="section-desc">클럽 총무님과 회원의 경기 몰입을 방해하는 모든 번거로움을 걷어냈습니다.</p>
 
     <div class="comparison-grid">
-      <!-- 기존 전용 앱의 한계 -->
       <div class="comp-card bad">
         <span class="comp-badge badge-bad">기존 전용 대진 앱</span>
         <h3 class="comp-title">"앱 깔고 가입해 주세요..."</h3>
@@ -347,7 +459,6 @@
         </ul>
       </div>
 
-      <!-- 온코트의 카카오톡 기반 혁신 -->
       <div class="comp-card good">
         <span class="comp-badge badge-good">온코트 (카카오톡 기반)</span>
         <h3 class="comp-title">"카톡 채널만 추가하면 끝!"</h3>
@@ -361,12 +472,12 @@
     </div>
   </section>
 
-  <!-- Features with Images -->
   <section class="container">
     <h2 class="section-title">스마트 코트 운영 핵심 기능</h2>
     <p class="section-desc">클럽 운영진의 번거로운 작업은 줄이고 경기의 즐거움은 극대화합니다.</p>
     
     <div class="features">
+      
       <div class="card">
         <img class="card-img" src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80" alt="대진표 생성">
         <div class="card-body">
@@ -374,24 +485,53 @@
           <p>인원수와 코트 수만 입력하면 파트너가 겹치지 않는 최적의 KDK 복식 대진과 풀리그 조편성을 즉시 완성합니다.</p>
         </div>
       </div>
+
       <div class="card">
-        <img class="card-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="코트 배정">
+        <div class="visual-container">
+          <img class="visual-bg-img" src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80" alt="테니스 코트 경기장">
+          <div class="kakao-push-overlay">
+            <div class="kakao-push-header">
+              <span class="badge-kakao">카카오 알림톡</span>
+              <span>온코트 실시간 호출</span>
+            </div>
+            <div class="kakao-push-msg">
+              🔔 <strong>[1코트 입장 호출]</strong><br>
+              김철수·박영희 회원님, 지금 1번 코트로 입장해 주세요!
+            </div>
+          </div>
+        </div>
         <div class="card-body">
           <h3>📱 실시간 코트 배정 & 호출</h3>
-          <p>경기 순환 알고리즘으로 대기 시간을 최소화하고, 다음 경기 참가자에게 카카오톡 호출 알림을 발송합니다.</p>
+          <p>경기 순환 알고리즘으로 대기 시간을 최소화하고, 다음 경기 참가자에게 카카오톡 호출 알림을 즉시 발송합니다.</p>
         </div>
       </div>
+
       <div class="card">
-        <img class="card-img" src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80" alt="모바일 점수판">
+        <div class="visual-container">
+          <div class="scoreboard-bg">
+            <div class="board-title">● LIVE LEADERBOARD (전광판)</div>
+            <div class="board-row"><span>1위 송영수</span><span style="color:var(--primary-neon);">4승 0패 (+18)</span></div>
+            <div class="board-row"><span>2위 김철수</span><span>3승 1패 (+12)</span></div>
+            <div class="board-row"><span>3위 이민호</span><span>2승 2패 (+4)</span></div>
+          </div>
+          <div class="phone-tilt-overlay">
+            <div class="phone-tilt-title">📱 모바일 스코어</div>
+            <div class="phone-score-box">
+              <div style="font-size:9px; color:#94a3b8; margin-bottom:2px;">KDK 3R (1코트)</div>
+              <div class="score-numbers">6 : 4</div>
+              <div style="font-size:9px; color:#10b981; font-weight:bold; margin-top:2px;">✓ 입력완료</div>
+            </div>
+          </div>
+        </div>
         <div class="card-body">
           <h3>📊 모바일 스코어 & 랭킹</h3>
-          <p>모바일에서 세트 스코어를 즉시 입력하며, 클럽 내 실시간 순위와 회원 누적 전적이 자동으로 데이터베이스에 기록됩니다.</p>
+          <p>모바일에서 세트 스코어를 즉시 입력하며, 클럽 전광판 순위와 회원 누적 전적이 자동으로 데이터베이스에 기록됩니다.</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Pricing & Policy Section -->
   <section class="pricing-section">
     <div class="container">
       <h2 class="section-title">서비스 요금 및 이용 정책</h2>
@@ -445,7 +585,6 @@
     </div>
   </section>
 
-  <!-- Footer : 심사 정보 일치화 -->
   <footer>
     <div class="container footer-content">
       <div class="footer-brand-wrap">
@@ -463,7 +602,7 @@
           <a href="http://pf.kakao.com/_tlgSX" target="_blank" class="footer-channel-link">온코트↗</a> · 
           <a href="http://pf.kakao.com/_vPQnC" target="_blank" class="footer-channel-link">컴시간플러스↗</a>
         </span>
-        <span><strong>고객센터/문의:</strong>이메일: metadesk.inc@gmail.com  전화: 010-2990-5499</span>
+        <span><strong>고객센터/문의:</strong> 이메일: metadesk.inc@gmail.com</span>
       </div>
       <div class="footer-links">
         <a onclick="openModal('privacyModal')"><strong>개인정보 처리방침</strong></a>
@@ -475,7 +614,6 @@
     </div>
   </footer>
 
-  <!-- Privacy Policy Modal -->
   <div id="privacyModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -503,7 +641,6 @@
     </div>
   </div>
 
-  <!-- Terms Modal -->
   <div id="termsModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
